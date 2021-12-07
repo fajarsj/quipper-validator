@@ -1,1 +1,7 @@
-alert("hello world");
+const helloWorld = () => {
+  console.log("Hello world 👋");
+};
+
+module.exports = {
+  helloWorld,
+};
