@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fajarsj/quipper-validator.git"
+    "url": "git://github.com/fajarsj/quipper-validator.git"
   },
   "author": "",
   "license": "ISC",
