@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/fajarsj/quipper-validator/issues"
   },
-  "homepage": "https://github.com/fajarsj/quipper-validator#readme"
+  "homepage": "https://github.com/fajarsj/quipper-validator#readme",
+  "publishConfig": {
+    "@YOUR-USERNAME:registry": "https://npm.pkg.github.com"
+  }
 }
