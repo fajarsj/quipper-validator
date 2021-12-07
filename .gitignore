@@ -105,3 +105,6 @@ dist
 
 # GitHub workflows
 .github/
+
+# npm
+.npmrc
