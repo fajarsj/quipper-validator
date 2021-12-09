@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "exit 0"
+    "test": "jest",
+    "build": "tsc",
+    "deploy": "npm publish"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,20 @@
   "homepage": "https://github.com/fajarsj/quipper-validator#readme",
   "publishConfig": {
     "@fajarsj:registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-typescript": "^7.16.0",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.12",
+    "babel": "^6.23.0",
+    "babel-jest": "^27.4.2",
+    "jest": "^27.0.3",
+    "ts-jest": "^27.1.1",
+    "ts-node": "^10.4.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.5.2"
   }
 }
