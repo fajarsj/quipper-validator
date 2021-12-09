@@ -1,1 +1,4 @@
-export declare const helloWorld: () => string;
+declare const validator: {
+    isEmail: (str: string) => boolean;
+};
+export default validator;

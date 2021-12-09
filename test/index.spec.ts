@@ -1,7 +1,7 @@
-import { helloWorld } from "./../src";
+import validator from "./../src";
 
-describe("helloWorld", () => {
-  it("Should return greetings", () => {
-    expect(helloWorld()).toEqual("Hello world 👋");
+describe("Validator", () => {
+  it("Should execute validator function correctly", () => {
+    expect(validator.isEmail("loremipsum@gmail.com")).toEqual(true);
   });
 });

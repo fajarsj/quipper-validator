@@ -1,1 +1,7 @@
-export const helloWorld = (): string => "Hello world 👋";
+import isEmail from "./lib/isEmail";
+
+const validator = {
+  isEmail,
+};
+
+export default validator;
