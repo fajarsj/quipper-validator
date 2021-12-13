@@ -1,13 +1,14 @@
 export interface Options {
-    displayErrors: boolean;
+    includeResponse: boolean;
 }
-export interface Error {
+export interface Response {
+    isValid: boolean;
     message: string;
     detail: {
         isIncludeNumber: boolean;
         isIncludeString: boolean;
-        isMinimunCharacter: boolean;
+        isMinChar: boolean;
     };
 }
-declare const isPassword: (str: string, options?: Options) => boolean | Error;
+declare const isPassword: (str: string, options?: Options) => boolean | Response;
 export default isPassword;

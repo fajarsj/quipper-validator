@@ -3,7 +3,7 @@ import isEmpty, { Options as OptionsIsEmpty } from "./lib/isEmpty";
 import isUsername from "./lib/isUsername";
 import isPassword, {
   Options as OptionsIsPassword,
-  Error as ErrorIsPassword,
+  Response as ResponseIsPassword,
 } from "./lib/isPassword";
 
 interface Validator {
@@ -13,7 +13,7 @@ interface Validator {
   isPassword: (
     str: string,
     options?: OptionsIsPassword
-  ) => boolean | ErrorIsPassword;
+  ) => boolean | ResponseIsPassword;
 }
 
 const validator: Validator = {
