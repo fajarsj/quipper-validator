@@ -99,9 +99,3 @@ typings/
 
 # TernJS port file
 .tern-port
-
-# GitHub workflows
-.github/
-
-# npm
-.npmrc
