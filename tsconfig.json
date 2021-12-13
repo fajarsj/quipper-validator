@@ -1,4 +1,8 @@
 {
+  "forceConsistentCasingInFileNames": true,
+  "noImplicitReturns": true,
+  "strict": true,
+  "noUnusedLocals": true,
   "compilerOptions": {
     "lib": ["es2017"],
     "module": "commonjs",
