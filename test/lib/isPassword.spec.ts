@@ -8,7 +8,7 @@ describe("isEmpty", () => {
   it("Should validate password with detail message", () => {
     expect(
       validator.isPassword("lorem", {
-        displayError: true,
+        displayErrors: true,
       })
     ).toEqual({
       detail: {

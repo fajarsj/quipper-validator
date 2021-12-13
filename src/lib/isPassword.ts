@@ -1,5 +1,5 @@
 export interface Options {
-  displayError: boolean;
+  displayErrors: boolean;
 }
 
 export interface Error {
@@ -12,7 +12,7 @@ export interface Error {
 }
 
 const defaultOptions = {
-  displayError: false,
+  displayErrors: false,
 };
 
 const isPassword = (
@@ -21,7 +21,7 @@ const isPassword = (
 ): boolean | Error => {
   options = Object.assign(defaultOptions, options);
 
-  if (options.displayError) {
+  if (options.displayErrors) {
     const error = {
       message: "",
       detail: {
