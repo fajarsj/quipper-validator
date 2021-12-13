@@ -23,7 +23,7 @@ const isPassword = (
   options = Object.assign(defaultOptions, options);
 
   if (options.includeResponse) {
-    const res = {
+    const res: Response = {
       isValid: false,
       message: "",
       detail: {
