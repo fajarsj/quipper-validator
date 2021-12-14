@@ -10,10 +10,10 @@ const defaultOptions: Options = {
   ignoreWhitespace: false,
 };
 
-const isLength = (str: string, options?: Options) => {
+const isLength = (str: string, options?: Options): boolean => {
   options = Object.assign(defaultOptions, options);
-  let min;
-  let max;
+  let min: Number | undefined;
+  let max: Number | undefined;
 
   if (options) {
     min = options.min || 0;
