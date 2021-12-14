@@ -1,6 +1,6 @@
-export interface Options {
-  includeResponse: boolean;
-}
+import isLength from "./isLength";
+import isIncludeNumber from "./isIncludeNumber";
+import isIncludeString from "./isIncludeString";
 
 export interface Response {
   isValid: boolean;
@@ -25,19 +25,23 @@ const isPasswordValidation = (str: string): Response => {
 
   const messages = [];
 
-  if (str.length >= 6) {
+  if (
+    isLength(str, {
+      min: 6,
+    })
+  ) {
     res.detail.isMinChar = true;
   } else {
     messages.push("6 characters");
   }
 
-  if (str.match(/\d/) || str.match(/\d+/g)) {
+  if (isIncludeNumber(str)) {
     res.detail.isIncludeNumber = true;
   } else {
     messages.push("combination of numbers");
   }
 
-  if (str.match(/[a-zA-Z]/) || str.match(/.*\\d.*/)) {
+  if (isIncludeString(str)) {
     res.detail.isIncludeString = true;
   } else {
     messages.push("combination of letters");

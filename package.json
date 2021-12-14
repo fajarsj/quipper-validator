@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "tslint --project tsconfig.json --format codeFrame 'src/**/*.ts' 'test/**/*.ts'",
     "test": "jest",
     "build": "tsc",
     "deploy": "npm publish"

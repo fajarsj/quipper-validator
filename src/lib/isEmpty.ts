@@ -6,7 +6,7 @@ const defaultOptions: Options = {
   ignoreWhitespace: false,
 };
 
-const isEmpty = (str: string, options: Options = defaultOptions) => {
+const isEmpty = (str: string, options?: Options): boolean => {
   options = Object.assign(defaultOptions, options);
 
   return (options.ignoreWhitespace ? str.trim().length : str.length) === 0;
