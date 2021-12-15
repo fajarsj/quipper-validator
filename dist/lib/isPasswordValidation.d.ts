@@ -1,6 +1,3 @@
-export interface Options {
-    includeResponse: boolean;
-}
 export interface Response {
     isValid: boolean;
     message: string;

@@ -1,5 +1,11 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+var isLength_1 = __importDefault(require("./isLength"));
+var isIncludeNumber_1 = __importDefault(require("./isIncludeNumber"));
+var isIncludeString_1 = __importDefault(require("./isIncludeString"));
 var isPasswordValidation = function (str) {
     var res = {
         isValid: false,
@@ -11,19 +17,21 @@ var isPasswordValidation = function (str) {
         },
     };
     var messages = [];
-    if (str.length >= 6) {
+    if ((0, isLength_1.default)(str, {
+        min: 6,
+    })) {
         res.detail.isMinChar = true;
     }
     else {
         messages.push("6 characters");
     }
-    if (str.match(/\d/) || str.match(/\d+/g)) {
+    if ((0, isIncludeNumber_1.default)(str)) {
         res.detail.isIncludeNumber = true;
     }
     else {
         messages.push("combination of numbers");
     }
-    if (str.match(/[a-zA-Z]/) || str.match(/.*\\d.*/)) {
+    if ((0, isIncludeString_1.default)(str)) {
         res.detail.isIncludeString = true;
     }
     else {
