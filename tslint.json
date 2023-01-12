@@ -1,5 +1,6 @@
 {
   "rules": {
-    "no-any": true
+    "no-any": true,
+    "no-null-keyword": true
   }
 }
